@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        
-        <div class="carousle" data-carousel>
-            <button class="carousel-button prev" data-carousel-button="prev">&#8592;</button>
-            <button class="carousel-button next" data-carousel-button="next">&#8594;</button>
     
+    <div class="carousle" data-carousel>
             
+        <button class="carousel-button prev" data-carousel-button="prev">&#8592;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#8594;</button>
+       
+        
+        </button>
             <ul data-slides>
                 <li class="slide" data-active>
                     <img src="/assets/image_1.jpg" alt=" Image 1">
@@ -26,7 +28,15 @@
             </ul>
 
         </div>
+        
     </div>
+
+     <div class="carousel-indicators">
+            <span class="indicator" data-slide-to="1" data-active></span>
+            <span class="indicator" data-slide-to="2"></span>
+            <span class="indicator" data-slide-to="3"></span>
+    </div>
+    
 
     </div>
     <script src="script.js"></script>
