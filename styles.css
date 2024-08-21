@@ -5,8 +5,8 @@ body{
 
 
 .carousel{
-    height: 100%;
-    width: 100%;
+    max-width: 1200px; 
+    height: 60vh;
 }
 
 
@@ -34,13 +34,14 @@ body{
 
 .slide > img{
     
-    width: 80%;
-    height: 60%;
+    width: 90%;  
+    max-width: 900px;  
+    height: auto;
+    max-height: 600px;
     border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    object-fit: contain; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: opacity 1s;
-
 }
 
 .slide[data-active]{
@@ -53,12 +54,15 @@ body{
     transform: translateY(-50%);
     background-color: rgba(233, 144, 144, 0.5);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     border-radius: 50%;
     border: none;
     padding: 0.5rem;
     z-index: 2;
+    @media (max-width: 600px) {
+        font-size: 2rem;
+    }
 }
 
 .carousel-button:hover,
@@ -73,11 +77,29 @@ body{
 }
 
 .carousel-button.prev {
-    left: rem;
+    left: 3rem;
+    @media (max-width: 880px) {
+        top:44rem;
+        left: 7rem;
+    }
+    @media (max-width: 400px) {
+        top:40rem;
+        left: 7rem;
+    }
 }
 
 .carousel-button.next {
     right: 3rem;
+    @media (max-width: 880px) {
+        top:44rem;
+        right: 7rem;
+    }
+    @media (max-width: 400px) {
+        top:40rem;
+        right: 7rem;
+    }
+    
+    
 }
 
 
@@ -85,10 +107,11 @@ body{
     display: flex;
     justify-content: center;
     position: absolute;
-    margin-bottom: 100px;
+    margin-top: 10%;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    
 }
 
 .indicator {
@@ -105,11 +128,4 @@ body{
 .indicator[data-active] {
     background-color: rgba(117, 41, 14, 0.7);
 }
-
-
-
-
-
-
-
 
