@@ -85,13 +85,13 @@ body{
 
 @media (max-width: 880px) {
     .carousel-button.prev{
-        left: 5vw;
-        top: 50vh;
+        left: 10vw;
+        top: 90vh;
         transform: translateY(-50%);
     }
     .carousel-button.next {
-        right: 5vw;
-        top: 50vh;
+        right: 10vw;
+        top: 90vh;
         transform: translateY(-50%);
     }
 }
