@@ -7,6 +7,8 @@ body{
 .carousel{
     max-width: 1200px; 
     height: 60vh;
+    display: flex;
+    direction: column;
 }
 
 
@@ -47,22 +49,19 @@ body{
 .slide[data-active]{
     opacity:1;
 }
-
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(233, 144, 144, 0.5);
+    background-image: linear-gradient(145deg, rgba(117, 41, 14, 0.7), rgba(233, 144, 144, 0.5));
     cursor: pointer;
     font-size: 1.2rem;
     color: white;
-    border-radius: 50%;
+    border-radius: 20px;
     border: none;
     padding: 0.5rem;
     z-index: 2;
-    @media (max-width: 600px) {
-        font-size: 2rem;
-    }
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .carousel-button:hover,
@@ -72,34 +71,29 @@ body{
     transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-button:focus {
-    outline: 1px solid rgb(123, 40, 40);
-}
-
 .carousel-button.prev {
-    left: 3rem;
-    @media (max-width: 880px) {
-        top:44rem;
-        left: 7rem;
-    }
-    @media (max-width: 400px) {
-        top:40rem;
-        left: 7rem;
-    }
+    left: 5vw;
+    top: 50vh;
+    transform: translateY(-50%);
 }
 
 .carousel-button.next {
-    right: 3rem;
-    @media (max-width: 880px) {
-        top:44rem;
-        right: 7rem;
+    right: 5vw;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 880px) {
+    .carousel-button.prev{
+        left: 5vw;
+        top: 50vh;
+        transform: translateY(-50%);
     }
-    @media (max-width: 400px) {
-        top:40rem;
-        right: 7rem;
+    .carousel-button.next {
+        right: 5vw;
+        top: 50vh;
+        transform: translateY(-50%);
     }
-    
-    
 }
 
 
